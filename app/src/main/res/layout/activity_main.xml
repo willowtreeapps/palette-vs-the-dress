@@ -1,0 +1,81 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".MainActivity">
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/cropped_image"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cropped image"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/full_image"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Full image"/>
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="288dp"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/dress_cropped"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="288dp"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/dress_full"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_gravity="center_horizontal"
+            android:text="# of colors to generate:"/>
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="192dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:inputType="phone"
+            android:hint="(Default of 32)"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="WHAT COLOR IS THE DRESS?!?"/>
+    </LinearLayout>
+</ScrollView>
