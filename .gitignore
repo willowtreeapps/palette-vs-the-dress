@@ -3,7 +3,6 @@
 /.idea/workspace.xml
 .DS_Store
 /build
-*.apk
 *.ap_
 *.dex
 *.class
